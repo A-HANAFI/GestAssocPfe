@@ -1,0 +1,60 @@
+<h2 class="container">Ajouter Orphelin</h2>
+<form #form='ngForm' autocomplete='off' (submit)="onSubmit(form)">
+                <input name="idOrphelin" type="hidden" #idOrphelin="ngModel" [(ngModel)]="orphelinService.orphelin.idOrphelin" class="form-control" placeholder="PRENOM">
+        
+                <mat-dialog-content>
+                                <p>
+        <mat-form-field class="form-group">
+                <input name="nom" #nom="ngModel" matInput [(ngModel)]="orphelinService.orphelin.nom" class="form-control" placeholder="NOM" required>
+                <mat-error *ngIf="nom.errors?.required  && nom.touched" > ce champ est obligatoire</mat-error>
+            </mat-form-field>
+
+    <mat-form-field class="form-group">
+            <input name="prenom" #prenom="ngModel" matInput [(ngModel)]="orphelinService.orphelin.prenom" class="form-control" placeholder="PRENOM" required>
+            <mat-error *ngIf="prenom.errors?.required  && prenom.touched" > ce champ est obligatoire</mat-error>
+        </mat-form-field>
+        </p>
+        <p>
+    <mat-form-field class="form-group">
+              <input name="tel" #tel="ngModel" matInput [(ngModel)]="orphelinService.orphelin.tel" class="form-control" placeholder="TELEPHONE" number minlength="8" required>
+              <mat-error *ngIf="tel.errors?.required  && tel.touched" > ce champ est obligatoire</mat-error>
+              <mat-error *ngIf="(tel.errors?.minlength || tel.errors?.number)  && tel.touched" >veuillez saisir un tel valide</mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-group">
+            <input name="dateNaissance" matInput #dateNaissance="ngModel" [(ngModel)]="orphelinService.orphelin.dateNaissance" class="form-control" placeholder="Date de Naissance" required>
+            <mat-error *ngIf="dateNaissance.errors?.required  && dateNaissance.touched" > ce champ est obligatoire</mat-error>
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="form-group">
+            <input name="age" #age="ngModel" matInput [(ngModel)]="orphelinService.orphelin.age" class="form-control" placeholder="AGE" required type="number">
+            <mat-error *ngIf="age.errors?.required  && age.touched" > ce champ est obligatoire</mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-group">
+            <input name="montantPension" matInput #montantPension="ngModel" [(ngModel)]="orphelinService.orphelin.montantPension" 
+            class="form-control" placeholder="Montant Pension" >
+            <mat-error *ngIf="montantPension.errors?.required  && montantPension.touched" > ce champ est obligatoire</mat-error>
+            
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field class="form-group">
+            <input name="adresse" matInput #adresse="ngModel" [(ngModel)]="orphelinService.orphelin.adresse" class="form-control" placeholder="adresse" required>
+            <mat-error *ngIf="adresse.errors?.required  && adresse.touched" > ce champ est obligatoire</mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-group">
+            <input name="observation" matInput #observation="ngModel" [(ngModel)]="orphelinService.orphelin.observation" class="form-control" placeholder="observation">
+            <mat-error *ngIf="observation.errors?.required  && observation.touched" > ce champ est obligatoire</mat-error>
+    </mat-form-field>
+</p>
+        <button style="width:25%;"  >Choisir un bénévole</button><br>
+</mat-dialog-content>
+<mat-dialog-actions>
+    
+        <button type="submit" style="width:50%" matInput [disabled]="form.invalid"  class="btn btn-lg btn-block btn-info">
+            Enregistrer
+        </button>
+    
+
+</mat-dialog-actions>
+</form>

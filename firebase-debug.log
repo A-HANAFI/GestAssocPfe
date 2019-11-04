@@ -1,0 +1,108 @@
+[debug] [2019-09-30T23:25:51.644Z] ----------------------------------------------------------------------
+[debug] [2019-09-30T23:25:51.647Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ahmed's\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions,hosting
+[debug] [2019-09-30T23:25:51.648Z] CLI Version:   7.4.0
+[debug] [2019-09-30T23:25:51.648Z] Platform:      win32
+[debug] [2019-09-30T23:25:51.648Z] Node Version:  v12.7.0
+[debug] [2019-09-30T23:25:51.650Z] Time:          Tue Oct 01 2019 01:25:51 GMT+0200 (GMT+02:00)
+[debug] [2019-09-30T23:25:51.650Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-30T23:25:51.665Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-30T23:25:51.666Z] > authorizing via signed-in user
+[debug] [2019-09-30T23:25:51.666Z] [iam] checking project pfeassocdb for permissions ["firebase.projects.get"]
+[debug] [2019-09-30T23:25:51.668Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pfeassocdb:testIamPermissions  
+
+[debug] [2019-09-30T23:25:52.610Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-30T23:25:52.614Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/pfeassocdb  
+ 
+[debug] [2019-09-30T23:25:52.973Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-30T23:25:52.978Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/pfeassocdb/webApps/-/config  
+ 
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-09-30T23:25:53.598Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-09-30T23:25:54.212Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions","node_version":"12.7.0"}
+[debug] [2019-09-30T23:25:54.213Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-30T23:25:54.216Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-30T23:25:54.222Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-30T23:25:54.224Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions\lib\index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (internal/modules/cjs/loader.js:228:19)
+    at Function.Module._findPath (internal/modules/cjs/loader.js:365:18)
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:612:27)
+    at Function.Module._load (internal/modules/cjs/loader.js:527:27)
+    at Module.require (internal/modules/cjs/loader.js:683:19)
+    at require (internal/modules/cjs/helpers.js:16:16)
+    at C:\Users\Ahmed's\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:677:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Ahmed's\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:58)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2019-09-30T23:33:49.613Z] File E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions\src\index.ts changed, reloading triggers
+[debug] [2019-09-30T23:33:51.475Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions","node_version":"12.7.0"}
+[debug] [2019-09-30T23:33:51.475Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-30T23:33:51.479Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-30T23:33:51.482Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-30T23:33:51.483Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[app]: http function initialized (http://localhost:5001/pfeassocdb/us-central1/app).
+[debug] [2019-09-30T23:34:01.335Z] File E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions\lib\index.js.map changed, reloading triggers
+[debug] [2019-09-30T23:34:01.341Z] File E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions\lib\index.js changed, reloading triggers
+[debug] [2019-09-30T23:34:02.809Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions","node_version":"12.7.0"}
+[debug] [2019-09-30T23:34:02.810Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-30T23:34:02.813Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-30T23:34:02.815Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-30T23:34:02.817Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-30T23:34:38.718Z] File E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions\src\index.ts changed, reloading triggers
+[debug] [2019-09-30T23:34:40.479Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions","node_version":"12.7.0"}
+[debug] [2019-09-30T23:34:40.479Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-30T23:34:40.483Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-30T23:34:40.486Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-30T23:34:40.487Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-30T23:34:53.075Z] File E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions\lib\index.js.map changed, reloading triggers
+[debug] [2019-09-30T23:34:53.082Z] File E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions\lib\index.js changed, reloading triggers
+[debug] [2019-09-30T23:34:54.540Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions","node_version":"12.7.0"}
+[debug] [2019-09-30T23:34:54.540Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-30T23:34:54.544Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-30T23:34:54.546Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-30T23:34:54.547Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-30T23:35:11.954Z] File E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions\lib\index.js.map changed, reloading triggers
+[debug] [2019-09-30T23:35:11.960Z] File E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation\functions\lib\index.js changed, reloading triggers
+[debug] [2019-09-30T23:35:13.462Z] [runtime-status] Functions runtime initialized. {"cwd":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions","node_version":"12.7.0"}
+[debug] [2019-09-30T23:35:13.463Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-30T23:35:13.467Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-30T23:35:13.469Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-30T23:35:13.470Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"E:\\Etude Superieur\\3 EME ANNEE\\PFE\\GestionAssociation\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-05T06:44:31.319Z] ----------------------------------------------------------------------
+[debug] [2019-10-05T06:44:31.342Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ahmed's\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-10-05T06:44:31.342Z] CLI Version:   7.4.0
+[debug] [2019-10-05T06:44:31.342Z] Platform:      win32
+[debug] [2019-10-05T06:44:31.342Z] Node Version:  v12.7.0
+[debug] [2019-10-05T06:44:31.395Z] Time:          Sat Oct 05 2019 08:44:31 GMT+0200 (GMT+02:00)
+[debug] [2019-10-05T06:44:31.396Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-05T06:44:31.458Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-05T06:44:31.459Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Etude Superieur\3 EME ANNEE\PFE\GestionAssociation
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[debug] [2019-10-05T07:44:58.828Z] Error: kill ENOSYS
+    at process.kill (internal/process/per_thread.js:189:13)
+    at process.listener (C:\Users\Ahmed's\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\signal-exit\index.js:95:15)
+    at process.emit (events.js:203:13)
+[error] 
+[error] Error: An unexpected error has occurred.

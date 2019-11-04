@@ -1,0 +1,40 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px"
+>
+
+<div fxFlex>
+    <div>
+      <h3><p>Liste des Elèves</p></h3>
+      <hr>
+    </div>
+  </div>
+
+<br>
+<table class="table table-hover">
+    <thead>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>E-mail</th>
+        <th>Login</th>
+        <th>Mot de passe</th>
+        
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let eleve of list">
+            
+            <td (click)="onEdit(eleve)"> {{eleve.nom}} </td>
+            <td (click)="onEdit(eleve)"> {{eleve.prenom}} </td>
+            <td (click)="onEdit(eleve)"> {{eleve.email}} </td>
+            <td (click)="onEdit(eleve)"> {{eleve.login}} </td>
+            <td (click)="onEdit(eleve)"> {{eleve.password}} </td>
+            
+            
+            
+            <td ><a class="btn text-danger" (click)="onDelete(eleve.idEleve)"><i class="fa fa-trash"></i></a></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>

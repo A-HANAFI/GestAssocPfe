@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+    Login
+  <span class="flex-spacer"></span>
+  <button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+<br>
+
+<form novalidate #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+  <mat-dialog-content>
+    <p>
+      <mat-form-field style="width:250px; margin-right: 20px; margin-left: 30px;">
+        <input matInput placeholder="E-mail" type="email" 
+        [(ngModel)]="user.email" name="email" #email="ngModel" required email>
+
+          <mat-error *ngIf="email.errors?.required">ce champ est obligatoire</mat-error>
+          <mat-error *ngIf="email.errors?.email">veuillez saisir un email valide</mat-error>
+      </mat-form-field>
+      <mat-form-field style="width:250px">
+        <input matInput placeholder="Mot de Passe " type="password" 
+        [(ngModel)]="user.password" name="password" #password="ngModel" required>
+
+          <mat-error *ngIf="password.errors?.required">ce champ est obligatoire</mat-error>
+      </mat-form-field></p>
+      <p>
+      <mat-checkbox [(ngModel)]="user.remember" name="remember" style="margin-left: 30px;">Remember Me</mat-checkbox>
+    </p>
+    <a mat-button (click)="openNewUserForm()" style="margin-left: 30px;"> S'enregistrer</a> 
+  </mat-dialog-content>
+
+  <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+
+  <mat-dialog-actions>
+    <span class="flex-spacer"></span>
+    <button mat-button mat-dialog-close>Cancel</button>
+    
+
+    <button type="submit" mat-button class="background-primary text-floral-white"
+     [disabled]="loginForm.form.invalid ">Login</button>
+  </mat-dialog-actions>
+</form>

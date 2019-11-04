@@ -1,0 +1,69 @@
+
+<div class="container"
+fxLayout="column"
+fxLayoutGap="10px">
+
+<div fxFlex>
+  <div>
+    <h3>Ajouter Bénévole</h3>
+    <hr>
+  </div>
+</div>
+<div fxFlex>
+<form novalidate #form='ngForm' autocomplete='off' (submit)="onSubmit(form)">
+    
+  
+      <input name="idBnevole"    type="hidden" #idBenevole="ngModel" [(ngModel)]="benevoleService.benevole.idBnevole" class="form-control" placeholder="Id">
+      
+      <mat-dialog-content>
+          <p>
+        <mat-form-field class="form-group">
+            <input name="nom"    #nom="ngModel" matInput [(ngModel)]="benevoleService.benevole.nom" class="form-control" placeholder="NOM" required>
+            <mat-error *ngIf="nom.errors?.required  && nom.touched" > ce champ est obligatoire</mat-error>
+        </mat-form-field>
+          
+           <mat-form-field class="form-group">
+              <input name="prenom"    #prenom="ngModel" matInput [(ngModel)]="benevoleService.benevole.prenom" class="form-control" placeholder="PRENOM" required>
+              <mat-error *ngIf="prenom.errors?.required  && prenom.touched" > ce champ est obligatoire</mat-error>
+        </mat-form-field>
+      </p>
+    <p>
+        <mat-form-field class="form-group">
+            <input name="email"    #email="ngModel" matInput [(ngModel)]="benevoleService.benevole.email" class="form-control" placeholder="E-mail" required>
+            <mat-error *ngIf="email.errors?.required  && email.touched" > ce champ est obligatoire</mat-error>
+            <mat-error *ngIf="email.errors?.email  && email.touched" >veuillez saisir un E-mail</mat-error>
+          </mat-form-field>
+            
+            <mat-form-field class="form-group">
+                <input name="login"    #login="ngModel" matInput [(ngModel)]="benevoleService.benevole.login" class="form-control" placeholder="LOGIN" required>
+                <mat-error *ngIf="login.errors?.required  && login.touched" > ce champ est obligatoire</mat-error>
+              </mat-form-field>
+            </p>
+            <p>
+          <mat-form-field class="form-group">
+              <input name="password"  type="password"  matInput #password="ngModel" [(ngModel)]="benevoleService.benevole.password" class="form-control" placeholder="Mot de Passe" required 
+              minlength="6"> 
+              <mat-error *ngIf="password.errors?.required  && password.touched" > ce champ est obligatoire</mat-error>
+              <mat-error *ngIf="password.errors?.minlength  && password.touched" >veuillez saisir 6 caractères au moins</mat-error>
+            </mat-form-field>
+              
+              <mat-form-field class="form-group">
+                  <input name="confPassword"  type="password" matInput #confPassword="ngModel" [(ngModel)]="benevoleService.benevole.confPassword" class="form-control" placeholder="Confirmer mot de Passe" required
+                  pattern="{{ password.value }}">
+                  <mat-error *ngIf="confPassword.errors?.required  && confPassword.touched" > ce champ est obligatoire</mat-error>
+                  <mat-error *ngIf="  confPassword.touched  || confPassword.errors?.pattern " >mot de passe non conforme </mat-error>
+                </mat-form-field>
+              </p>
+              <a mat-button style="background:lawngreen" (click) = "openAddOrphelin()" > Choisir Orphelin a Adopter</a><br>
+              <br>
+              <a mat-button style="background:lawngreen" (click) = "openOrphelinList()"> Liste Orphelin Adopter</a>
+            <br>
+            </mat-dialog-content>
+            <mat-dialog-actions>
+  <br>
+    <button type="submit"  class="btn btn-lg btn-block btn-info"
+     [disabled]="form.invalid " style="width: 50%;">Enregistrer</button>
+    </mat-dialog-actions>
+</form>
+</div>
+</div>

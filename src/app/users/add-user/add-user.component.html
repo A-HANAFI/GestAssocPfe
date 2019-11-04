@@ -1,0 +1,74 @@
+<div class="container"
+fxLayout="column"
+fxLayoutGap="10px">
+
+<div fxFlex>
+  <div>
+    <h3>Ajouter Utilisateur</h3>
+    <hr>
+  </div>
+</div>
+<div fxFlex >
+<form novalidate #form='ngForm' autocomplete='off' (submit)="onSubmit(form)">
+  <input name="id" #id="ngModel" [(ngModel)] = "userService.user.id" class="form-control" type="hidden">
+
+  <mat-dialog-content>
+   
+        <p>
+      <mat-form-field class="form-group" >
+            <input name="nom"  matInput  #nom="ngModel" [(ngModel)]="userService.user.nom" class="form-control" placeholder="NOM" required >
+        <mat-error *ngIf="nom.errors?.required  && nom.touched" > ce champ est obligatoire</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field class="form-group">
+              <input name="prenom" matInput   #prenom="ngModel" [(ngModel)]="userService.user.prenom" class="form-control" placeholder="PRENOM" required>
+              <mat-error *ngIf="prenom.errors?.required  && prenom.touched" > ce champ est obligatoire</mat-error>
+        </mat-form-field>
+        
+      </p>
+        <p>
+        <mat-form-field class="form-group">
+            <input name="email" matInput   #email="ngModel" [(ngModel)]="userService.user.email" class="form-control" placeholder="E-mail" email required>
+            <mat-error *ngIf="email.errors?.required  && email.touched"> ce champ est obligatoire</mat-error>
+          <mat-error *ngIf="email.errors?.email  && email.touched" >veuillez saisir un E-mail</mat-error>
+          </mat-form-field>
+          
+          <mat-form-field class="form-group">
+                <input name="login"  matInput  #login="ngModel" [(ngModel)]="userService.user.login" class="form-control" placeholder="LOGIN" required>
+                <mat-error *ngIf="login.errors?.required  && login.touched" > ce champ est obligatoire</mat-error>
+              </mat-form-field>
+            </p>   
+          <p>
+              <mat-form-field class="form-group">
+              <input name="password" matInput type="password"  #password="ngModel" [(ngModel)]="userService.user.password" class="form-control" placeholder="Mot de Passe" minlength="6" required>
+              <mat-error *ngIf="password.errors?.required  && password.touched" > ce champ est obligatoire</mat-error>
+              <mat-error *ngIf="password.errors?.minlength  && password.touched" >veuillez saisir 6 caractères au moins</mat-error>
+            </mat-form-field>
+            
+              
+            <mat-form-field class="form-group">
+                  <input name="confPassword" matInput type="password"  #confPassword="ngModel" 
+                  [(ngModel)]="userService.user.confPassword" class="form-control" 
+                  placeholder="Confirmer mot de Passe" required pattern="{{ password.value }}">
+                  <mat-error *ngIf="confPassword.errors?.required  && confPassword.touched" > ce champ est obligatoire</mat-error>
+                  <mat-error *ngIf="  confPassword.touched  || confPassword.pattern " >mot de passe non conforme </mat-error>
+                </mat-form-field>
+              </p>   
+              
+            <select name="profil" matInput #profil="ngModel" [(ngModel)]="userService.user.profil" class=" custom-select d-block form-group" style="width: 60%;" placeholder="Profil" required>
+                <option value="" disabled selected hidden>Profil</option>
+                    <option *ngFor="let profil of profils" > {{profil}} </option>
+                </select>
+                
+            </mat-dialog-content>
+            <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+              <mat-dialog-actions>
+                  
+              <button mat-button type="submit" [disabled]="form.invalid || password.value !== confPassword.value"
+              style="border: solid rgb(127, 0, 139);"
+              >Enregistrer</button>
+               
+               </mat-dialog-actions>
+</form>
+</div>
+</div>

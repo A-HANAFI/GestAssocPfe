@@ -1,0 +1,36 @@
+<form class="form-inline md-form mr-auto mb-4">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+    <button mdbBtn size="sm" gradient="aqua" rounded="true" class="my-0 waves-light" mdbWavesEffect type="submit">Search</button>
+  </form>
+
+<table class="table table-hover">
+<thead>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Téléphone</th>
+    <th>Date de naissance</th>
+    <th>Age</th>
+    <th>Montant Pension</th>
+    <th>adresse</th>
+    <th>observation</th>
+</thead>
+<tbody>
+    <tr>
+            
+                    
+    </tr>
+    <tr *ngFor="let orphelin of listOrphelin">
+        <mat-checkbox>
+        <td (click)="onEdit(orphelin)">  {{orphelin.nom}} </td>
+        <td (click)="onEdit(orphelin)"> {{orphelin.prenom}} </td>
+        <td (click)="onEdit(orphelin)"> {{orphelin.tel}} </td>
+        <td (click)="onEdit(orphelin)"> {{orphelin.dateNaissance.seconds * 1000 | date : 'fullDate'}} </td>
+        <td (click)="onEdit(orphelin)"> {{orphelin.age}} </td>
+        <td (click)="onEdit(orphelin)"> {{orphelin.montantPension}} </td>
+        <td (click)="onEdit(orphelin)"> {{orphelin.adresse}} </td>
+        <td (click)="onEdit(orphelin)"> {{orphelin.observation}} </td></mat-checkbox>
+        <td ><a class="btn text-danger"  (click)="onDelete(benevoleService.benevole.idBenevole ,orphelin.idOrphelin)"><i class="fa fa-trash"></i></a></td>
+    
+    </tr>
+</tbody>
+</table>

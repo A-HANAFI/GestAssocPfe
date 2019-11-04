@@ -1,0 +1,48 @@
+<h2 class="container">Ajouter projet</h2>
+<form #form='ngForm' autocomplete='off' (submit)="onSubmit(form)">
+                <input name="id" type="hidden" #id="ngModel" [(ngModel)]="projetService.projet.id" class="form-control" placeholder="PRENOM">
+        
+                <mat-dialog-content>
+
+                        <mat-form-field class="form-group">
+                                <input name="libelle" #libelle="ngModel" matInput [(ngModel)]="projetService.projet.libelle"
+                                 class="form-control" placeholder="Libelle Projet" required>
+                                <mat-error *ngIf="libelle.errors?.required  && libelle.touched" > ce champ est obligatoire</mat-error>
+                            </mat-form-field>
+                         
+                            <p padding="10px">
+                                       
+                                <mat-form-field class="form-group" >
+                                               <div> date debut projet </div>
+                                          <input name="dateDebut" #dateDebut="ngModel" matInput [(ngModel)]="projetService.projet.dateDebut" class="form-control"
+                                            type="date" required>
+                                          <mat-error *ngIf="dateDebut.errors?.required  && dateDebut.touched" > ce champ est obligatoire</mat-error>
+                                </mat-form-field>
+                                </p>
+                                 <p >
+                                <mat-form-field class="form-group" >
+                                                date fin projet  
+                                        <input name="dateFin" matInput #dateFin="ngModel" [(ngModel)]="projetService.projet.dateFin" class="form-control" 
+                                         type="date"  required>
+                                        <mat-error *ngIf="dateFin.errors?.required  && dateFin.touched" > ce champ est obligatoire</mat-error>
+                                    </mat-form-field>
+                                </p>
+                                    
+                            <input name="srcPhoto"  type="hidden"  #srcPhoto="ngModel" [(ngModel)]="projetService.projet.srcPhoto" 
+                            class="form-control" >
+                           
+                
+                            <mat-form-field class="form-group">
+                                <textarea name="description" #description="ngModel" matInput style="height:80px"
+                                [(ngModel)]="projetService.projet.description" class="form-control" placeholder="Description" ></textarea>
+                                
+                            </mat-form-field>
+                
+
+                </mat-dialog-content>
+<mat-dialog-actions>
+        <button type="submit" style="width:50%" matInput [disabled]="form.invalid"  class="btn btn-lg btn-block btn-info">
+                Enregistrer
+            </button>
+</mat-dialog-actions>
+</form>

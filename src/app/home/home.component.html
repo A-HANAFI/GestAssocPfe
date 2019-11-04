@@ -1,0 +1,39 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px"
+     
+     >
+     <div fxFlex style="padding-left:300px; width:120%; text-align: center" >
+           
+          <mat-card >
+              <mat-card-header>
+                    <mat-card-title ><h3 >Qui Etes Nous</h3></mat-card-title>
+                <mat-card-subtitle></mat-card-subtitle>
+                <img mat-card-avatar src='assets/images/interrogation.jpg'>
+             </mat-card-header>
+             
+                <mat-card-content><h5>Association Tunisienne culturelle et de charité dont son but<br> est l’enseignement du coran et l’aide sociale par le biais des donneurs</h5></mat-card-content>
+          </mat-card>
+        </div  >
+
+
+            <div style="padding-left:300px; width:128%" >
+              <h3>
+                Nos Commités
+              </h3>
+              <hr>
+            </div>
+
+            <div style="padding-left:300px; width:128%"  >
+          <mat-grid-list cols="2" rowHeight="200px"   >
+            <mat-grid-tile *ngFor="let comite of comites" >
+              <img height="200px" src={{comite.src}} alt={{comite.nom}}>
+            <mat-grid-tile-footer>
+              <h1 matLine> {{comite.nom | uppercase}} </h1>
+            </mat-grid-tile-footer>
+              
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+</div>
+<app-projet></app-projet>

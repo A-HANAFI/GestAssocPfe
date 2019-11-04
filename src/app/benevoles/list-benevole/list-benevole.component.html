@@ -1,0 +1,38 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px"
+>
+<div fxFlex>
+    <div>
+      <h3>Liste des Bénévoles</h3>
+      <hr>
+    </div>
+  </div>
+
+<table class="table table-hover">
+    <thead>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>E-mail</th>
+        <th>Login</th>
+        <th>Mot de passe</th>
+        
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let benevole of list">
+            
+            <td (click)="onEdit(benevole)"> {{benevole.nom}} </td>
+            <td (click)="onEdit(benevole)"> {{benevole.prenom}} </td>
+            <td (click)="onEdit(benevole)"> {{benevole.email}} </td>
+            <td (click)="onEdit(benevole)"> {{benevole.login}} </td>
+            <td (click)="onEdit(benevole)"> {{benevole.password}} </td>
+            
+            
+            
+            <td ><a class="btn text-danger" (click)="onDelete(user.idBenevole)"><i class="fa fa-trash"></i></a></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
