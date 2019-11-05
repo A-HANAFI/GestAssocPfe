@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class NewProjetComponent implements OnInit {
 
-  constructor(private projetService : ProjetService,
+  constructor(public projetService : ProjetService,
     private firestore : AngularFirestore) { }
 
   ngOnInit() {

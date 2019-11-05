@@ -12,18 +12,18 @@ export class UsersListComponent implements OnInit {
 
   list : User[];
 
-  constructor(private service: UserService,
+  constructor(
     private Firestore: AngularFirestore,
-    private userService : UserService) { }
+    public userService : UserService) { }
 
   ngOnInit() {
     this.listerUser();
   }
 
   listerUser(){
-    this.service.getUsers().subscribe(
+    this.userService.getUsers().subscribe(
       actionArray =>{
-        this.service.list = actionArray.map(item => {
+        this.userService.list = actionArray.map(item => {
             return {
               idUser: item.payload.doc.id,
               ...item.payload.doc.data() 
@@ -32,7 +32,7 @@ export class UsersListComponent implements OnInit {
   });}
 
   onEdit(user : User){
-    this.service.user =  Object.assign({},user) ;
+    this.userService.user =  Object.assign({},user) ;
   }
 
   onDelete(id: string){

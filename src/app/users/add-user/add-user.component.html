@@ -10,7 +10,7 @@ fxLayoutGap="10px">
 </div>
 <div fxFlex >
 <form novalidate #form='ngForm' autocomplete='off' (submit)="onSubmit(form)">
-  <input name="id" #id="ngModel" [(ngModel)] = "userService.user.id" class="form-control" type="hidden">
+  <input name="idUser" #idUser="ngModel" [(ngModel)] = "userService.user.idUser" class="form-control" type="hidden">
 
   <mat-dialog-content>
    
@@ -51,7 +51,7 @@ fxLayoutGap="10px">
                   [(ngModel)]="userService.user.confPassword" class="form-control" 
                   placeholder="Confirmer mot de Passe" required pattern="{{ password.value }}">
                   <mat-error *ngIf="confPassword.errors?.required  && confPassword.touched" > ce champ est obligatoire</mat-error>
-                  <mat-error *ngIf="  confPassword.touched  || confPassword.pattern " >mot de passe non conforme </mat-error>
+                  
                 </mat-form-field>
               </p>   
               

@@ -17,7 +17,7 @@ export class AddBenevoleComponent implements OnInit {
   constructor(private firestore : AngularFirestore,
     public dialogRef: MatDialogRef<AddBenevoleComponent>,
     public dialog: MatDialog,
-    private benevoleService : BenevoleService,
+    public benevoleService : BenevoleService,
     ) { }
 
   ngOnInit() {

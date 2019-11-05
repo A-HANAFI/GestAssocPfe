@@ -12,7 +12,7 @@ export class BenevoleLierComponent implements OnInit {
 
   
 
-  constructor(private benevoleService: BenevoleService,
+  constructor(public benevoleService: BenevoleService,
     private Firestore: AngularFirestore) { }
 
     benevole : Benevole;

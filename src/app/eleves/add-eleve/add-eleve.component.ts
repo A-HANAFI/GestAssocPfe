@@ -14,7 +14,7 @@ export class AddEleveComponent implements OnInit {
   constructor(private firestore : AngularFirestore,
     
     public dialog: MatDialog,
-    private eleveService : EleveService,) { }
+    public eleveService : EleveService,) { }
 
   ngOnInit() {
     this.resetForm();

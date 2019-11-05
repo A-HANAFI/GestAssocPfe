@@ -14,9 +14,9 @@ import { BenevoleLierComponent } from '../benevole-lier/benevole-lier.component'
 export class NewOrphelinComponent implements OnInit {
   
 
-  constructor( private orphelinService : OrphelinService,
+  constructor( public orphelinService : OrphelinService,
     private firestore : AngularFirestore,
-    private serviceBenevole : BenevoleService,
+    public serviceBenevole : BenevoleService,
     public dialogRef: MatDialogRef<BenevoleLierComponent>,
     public dialog: MatDialog,
     ) { }

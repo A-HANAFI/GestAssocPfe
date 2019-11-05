@@ -10,19 +10,19 @@
     <p>
       <mat-form-field style="width:250px; margin-right: 20px; margin-left: 30px;">
         <input matInput placeholder="E-mail" type="email" 
-        [(ngModel)]="user.email" name="email" #email="ngModel" required email>
+        [(ngModel)]="userService.user.email" name="email" #email="ngModel" required email>
 
           <mat-error *ngIf="email.errors?.required">ce champ est obligatoire</mat-error>
           <mat-error *ngIf="email.errors?.email">veuillez saisir un email valide</mat-error>
       </mat-form-field>
       <mat-form-field style="width:250px">
         <input matInput placeholder="Mot de Passe " type="password" 
-        [(ngModel)]="user.password" name="password" #password="ngModel" required>
+        [(ngModel)]="userService.user.password" name="password" #password="ngModel" required>
 
           <mat-error *ngIf="password.errors?.required">ce champ est obligatoire</mat-error>
       </mat-form-field></p>
       <p>
-      <mat-checkbox [(ngModel)]="user.remember" name="remember" style="margin-left: 30px;">Remember Me</mat-checkbox>
+      <mat-checkbox  style="margin-left: 30px;">Remember Me</mat-checkbox>
     </p>
     <a mat-button (click)="openNewUserForm()" style="margin-left: 30px;"> S'enregistrer</a> 
   </mat-dialog-content>

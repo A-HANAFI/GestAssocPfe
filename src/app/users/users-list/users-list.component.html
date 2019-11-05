@@ -20,7 +20,7 @@
         
     </thead>
     <tbody>
-        <tr *ngFor="let user of service.list">
+        <tr *ngFor="let user of userService.list">
             
             <td (click)="onEdit(user)"> {{user.nom}} </td>
             <td (click)="onEdit(user)"> {{user.prenom}} </td>

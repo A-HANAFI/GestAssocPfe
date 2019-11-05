@@ -18,11 +18,11 @@ import {profils}from '../../model/profils';
 })
 export class AddUserComponent implements OnInit {
 
-  constructor(private userService : UserService,
+  constructor(public userService : UserService,
     private firestore : AngularFirestore,
     public dialogRef: MatDialogRef<AddUserComponent>,
     public dialog: MatDialog,
-    private authService : AuthService,
+    public authService : AuthService,
     private router : Router) { }
 
     errorMessage: string = '';

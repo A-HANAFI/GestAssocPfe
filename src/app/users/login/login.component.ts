@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<LoginComponent>,
     public dialog: MatDialog,
-    private authService : AuthService,
-    private userService:  UserService
+    public authService : AuthService,
+    public userService:  UserService
     ) { }
 
   ngOnInit() {

@@ -7,7 +7,7 @@ export class User{
     idUser?:string;
     nom?: string;
     prenom ?: string;
-    email?: string;
+    email: string;
     login?: string;
     password? : string;
     confPassword?: string;

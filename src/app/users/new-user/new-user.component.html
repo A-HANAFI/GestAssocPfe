@@ -6,7 +6,7 @@
 
 <br>
 <form novalidate #form='ngForm' autocomplete='off' (submit)="onSubmit(form)">
-  <input name="id" #id="ngModel" [(ngModel)] = "userService.user.id" class="form-control" type="hidden">
+  <input name="idUser" #idUser="ngModel" [(ngModel)] = "userService.user.idUser" class="form-control" type="hidden">
 
   <mat-dialog-content>
    

@@ -17,7 +17,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NewUserComponent implements OnInit {
 
-  constructor(private userService : UserService,
+  constructor(public userService : UserService,
     private firestore : AngularFirestore,
     public dialogRef: MatDialogRef<NewUserComponent>,
     private authService : AuthService,

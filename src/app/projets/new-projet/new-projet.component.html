@@ -1,30 +1,30 @@
 <h2 class="container">Ajouter projet</h2>
 <form #form='ngForm' autocomplete='off' (submit)="onSubmit(form)">
-                <input name="id" type="hidden" #id="ngModel" [(ngModel)]="projetService.projet.id" class="form-control" placeholder="PRENOM">
+                <input name="idProjet" type="hidden" #idProjet="ngModel" [(ngModel)]="projetService.projet.idProjet" class="form-control" placeholder="PRENOM">
         
                 <mat-dialog-content>
 
                         <mat-form-field class="form-group">
-                                <input name="libelle" #libelle="ngModel" matInput [(ngModel)]="projetService.projet.libelle"
+                                <input name="libelleProjet" #libelleProjet="ngModel" matInput [(ngModel)]="projetService.projet.libelleProjet"
                                  class="form-control" placeholder="Libelle Projet" required>
-                                <mat-error *ngIf="libelle.errors?.required  && libelle.touched" > ce champ est obligatoire</mat-error>
+                                <mat-error *ngIf="libelleProjet.errors?.required  && libelleProjet.touched" > ce champ est obligatoire</mat-error>
                             </mat-form-field>
                          
                             <p padding="10px">
                                        
                                 <mat-form-field class="form-group" >
                                                <div> date debut projet </div>
-                                          <input name="dateDebut" #dateDebut="ngModel" matInput [(ngModel)]="projetService.projet.dateDebut" class="form-control"
+                                          <input name="dateDebutProjet" #dateDebutProjet="ngModel" matInput [(ngModel)]="projetService.projet.dateDebutProjet" class="form-control"
                                             type="date" required>
-                                          <mat-error *ngIf="dateDebut.errors?.required  && dateDebut.touched" > ce champ est obligatoire</mat-error>
+                                          <mat-error *ngIf="dateDebutProjet.errors?.required  && dateDebutProjet.touched" > ce champ est obligatoire</mat-error>
                                 </mat-form-field>
                                 </p>
                                  <p >
                                 <mat-form-field class="form-group" >
                                                 date fin projet  
-                                        <input name="dateFin" matInput #dateFin="ngModel" [(ngModel)]="projetService.projet.dateFin" class="form-control" 
+                                        <input name="dateFinProjet" matInput #dateFinProjet="ngModel" [(ngModel)]="projetService.projet.dateFinProjet" class="form-control" 
                                          type="date"  required>
-                                        <mat-error *ngIf="dateFin.errors?.required  && dateFin.touched" > ce champ est obligatoire</mat-error>
+                                        <mat-error *ngIf="dateFinProjet.errors?.required  && dateFinProjet.touched" > ce champ est obligatoire</mat-error>
                                     </mat-form-field>
                                 </p>
                                     
@@ -33,8 +33,8 @@
                            
                 
                             <mat-form-field class="form-group">
-                                <textarea name="description" #description="ngModel" matInput style="height:80px"
-                                [(ngModel)]="projetService.projet.description" class="form-control" placeholder="Description" ></textarea>
+                                <textarea name="descriptionProjet" #descriptionProjet="ngModel" matInput style="height:80px"
+                                [(ngModel)]="projetService.projet.descriptionProjet" class="form-control" placeholder="Description" ></textarea>
                                 
                             </mat-form-field>
                 

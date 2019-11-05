@@ -22,8 +22,8 @@ export class OrphelinsLierComponent implements OnInit {
 
   constructor(
     private Firestore: AngularFirestore,
-    private orphelinService: OrphelinService,
-    private benevoleService: BenevoleService
+    public orphelinService: OrphelinService,
+    public benevoleService: BenevoleService
     ) { }
 
     idBenevole = this.benevoleService.benevole.idBenevole
