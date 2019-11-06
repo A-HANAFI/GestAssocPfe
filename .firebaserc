@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "pfeassocdb"
+  },
+  "targets": {
+    "pfeassocdb": {
+      "hosting": {
+        "GestionAssociation": [
+          "pfeassocdb"
+        ]
+      }
+    }
   }
 }
